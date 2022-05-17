@@ -36,6 +36,20 @@ class website extends Controller
             }
                 echo $html;
         }
+
+        public function getStudentName(Request $request){
+        
+            $lid=$request->post('lid');
+            $student_name= DB::table('students')->where('course_id',$lid)
+           ->orderBy('name','asc')->get();
+               
+               $html='<option value="">Student Name</option>';
+              
+               foreach($student_name as $list){
+                   $html.='<option value="'.$list->id.'">'.$list->name.'</option>';
+               }
+                   echo $html;
+           }
             
         
         

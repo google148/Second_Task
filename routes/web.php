@@ -4,6 +4,8 @@ use App\Http\Controllers\FormController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\website;
 use App\Http\Controllers\MyController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +20,10 @@ use App\Http\Controllers\MyController;
 Route::get('/',[website::class,'hello']);
 Route::get('/index',[website::class,'index']);
 Route::post('/getName',[website::class,'getName']);
+Route::post('/getStudentName',[website::class,'getStudentName']);
+
+
+// Route::get('/showStudent',[StudentController::class,'showStudent']);
 
 
 
